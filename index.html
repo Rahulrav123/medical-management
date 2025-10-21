@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medical Management System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Medical Management System</h1>
+
+    <div class="form-container">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="login()">Login</button>
+
+      <p>Don’t have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+    </div>
+
+    <div class="form-container hidden" id="registerForm">
+      <h2>Register</h2>
+      <input type="text" id="regName" placeholder="Full Name">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPassword" placeholder="Password">
+      <select id="regRole">
+        <option value="patient">Patient</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button onclick="register()">Register</button>
+      <p>Already registered? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

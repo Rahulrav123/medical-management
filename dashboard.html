@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, <span id="userName"></span>!</h1>
+    <h3>Dashboard</h3>
+
+    <div class="nav">
+      <button onclick="go('doctors.html')">Manage Doctors</button>
+      <button onclick="go('patients.html')">Manage Patients</button>
+      <button onclick="go('appointments.html')">Appointments</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem('loggedUser'));
+    if (!user) window.location.href = 'index.html';
+    document.getElementById('userName').textContent = user.name;
+
+    function go(page){ window.location.href = page; }
+    function logout(){ localStorage.removeItem('loggedUser'); window.location.href = 'index.html'; }
+  </script>
+</body>
+</html>

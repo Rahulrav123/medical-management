@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Appointments</title>
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="container">
+  <h2>Book Appointment</h2>
+
+  <select id="patientSelect"></select>
+  <select id="doctorSelect"></select>
+  <input type="datetime-local" id="dateTime">
+  <button onclick="bookAppointment()">Book</button>
+
+  <h3>All Appointments</h3>
+  <ul id="apptList"></ul>
+  <button onclick="window.location.href='dashboard.html'">Back</button>
+</div>
+
+<script src="js/appointments.js"></script>
+</body>
+</html>
